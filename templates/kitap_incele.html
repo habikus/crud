@@ -1,0 +1,25 @@
+{% extends 'header.html' %}
+{% block orta %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="thumbnail">
+                    <div class="caption">
+                        <table border="3" style="width:520px">
+                        <tr>
+                        <td> Kitap Adı:</td><td><a href="{{ kitap.get_absolute_url }}"><h3>{{ kitap.kitapadi }}</h3></a></td>
+                        </tr>
+                        <tr><td>Açıklama:</td><td>{{ kitap.aciklama|safe|linebreaks|truncatechars:150}}</td></tr>
+                        <tr><td>Yazarı:</td><td>{{ kitap.yazari}}</td></tr>
+                        <tr><td>Yayinevi:</td><td>{{ kitap.yayinevi}}</td></tr>
+                        <tr><td>Türü:</td><td>{{ kitap.turu}}</td></tr>
+                        </table>
+                         <a href="{{ kitap.get_absolute_url2 }}" class="btn btn-primary" role="button">İncele</a>
+                         <a href="{{ kitap.get_update_url }}" class="btn btn-default" role="button">Güncelle</a>
+                         <a href="{{ kitap.get_delete_url }}" class="btn btn-danger" role="button">Sil</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock orta %}

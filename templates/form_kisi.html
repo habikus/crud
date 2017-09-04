@@ -1,0 +1,25 @@
+{% extends 'header.html' %}
+{% load crispy_forms_tags %}
+{% block orta %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h1>Form Kişiler</h1>
+                <table border="4" cellpadding="2" cellspacing="3" bgcolor="#663333">
+                <form  method="POST" >
+                    {% csrf_token %}
+                        <tr><td>Adı ve Soyadı</td><td>{{ form.adsoyad}}</td></tr>
+                        <tr><td>Sınıfı</td><td>{{ form.sinifi }}</td></tr>
+                        <tr><td>Nosu</td><td>{{form.nosu}}</td></tr>
+                        <tr><td>Telefonu</td><td>{{ form.telefonu }}</td></tr>
+                        <tr><td>e-Mail</td><td>{{ form.email}}</td></tr>
+                        <tr><td>Açıklama</td><td><div style="height:250px; width:300px;">{{ form.aciklama }}</div></td></tr>
+                        <tr><td> </td><td ><input class="btn btn-warning" type="submit" value="Post Oluştur"></td></tr>
+                </form>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock orta %}

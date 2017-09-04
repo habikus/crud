@@ -1,0 +1,110 @@
+
+<head>
+<style type="text/css">
+.auto-style1 {
+	text-align: center;
+}
+</style>
+</head>
+
+{% extends 'header.html' %}
+
+{% block orta %}
+    <div class="container-fluid">
+       <div class="row" style="margin-bottom: 30px;">
+           <div class="col-md-4 col-sm-6">
+<form>
+      <table border="2" cellpadding="10" cellspacing="10">
+      <tr>
+        <th><label for="email">Email address:</label></th>
+        <th><input type="email" class="form-control" id="email"></th>
+      </tr>
+      <tr>
+        <th><label for="pwd">Password:</label></th>
+        <th> <input type="text" class="form-control" id="pwd"></th>
+      </tr>
+      <tr>
+        <th><label><input type="checkbox"> Remember me</label></th>
+        <th><button type="submit" class="btn btn-default">GÖNDER</button></th>
+      </tr>
+
+  </table>
+</form>
+
+
+
+           </div>
+           <div class="auto-style1">
+           <h1 align="center">Tarihçe</h1>
+<img src="../static/logo-03.jpg" class="img-responsive" alt="Image" height="131" width="539">
+			   <br>Okulumuz 1986 yılında İstanbul ili, Fatih İlçesinde 21 kurucu üye tarafından kurulan Şefkat Vakfı tarafından tesis edilmiştir. 1986 yılında okulumuzun temelleri atılmış, 1990/1991 eğitim-öğretim yılında ise faaliyetlerine başlamıştır.
+
+1997 yılında Gaziosmanpaşada ki kampüsünde Şefkat Lisesi ile eğitime başlayan kurumumuz da  2003 yılında Meslek Lisesi Çocuk gelişimi bölümü açıldı.
+
+
+2005 yılında Fen Lisesini açarak eğitim öğretimi daha güçlendiren Şefkat eğitim kurumları 2008 yılında ise Anadolu Lisesini açarak eğitimde model olma yolunda eğitim öğretime devam ediyor.
+
+Okulumuz 2011 yılından itibaren eğitim öğretime Fen Lisesi ve Anadolu Lisesi olarak devam etmektedir.
+
+           </div>
+           <div class="col-md-4 col-sm-6"></div>
+       </div>
+    </div>
+
+AAAAA
+<div class="container">
+  <h2>Horizontal form: control states</h2>
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="col-sm-2 control-label">Focused</label>
+      <div class="col-sm-10">
+        <input class="form-control" id="focusedInput" type="text" value="Click to focus...">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="disabledInput" class="col-sm-2 control-label">Disabled</label>
+      <div class="col-sm-10">
+        <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
+      </div>
+    </div>
+    <fieldset disabled>
+      <div class="form-group">
+        <label for="disabledTextInput" class="col-sm-2 control-label">Disabled input and select list (Fieldset disabled)</label>
+        <div class="col-sm-10">
+          <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="disabledSelect" class="col-sm-2 control-label"></label>
+        <div class="col-sm-10">
+          <select id="disabledSelect" class="form-control">
+            <option>Disabled select</option>
+          </select>
+        </div>
+      </div>
+    </fieldset>
+    <div class="form-group has-success has-feedback">
+      <label class="col-sm-2 control-label" for="inputSuccess">Input with success and glyphicon</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputSuccess">
+        <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+      </div>
+    </div>
+    <div class="form-group has-warning has-feedback">
+      <label class="col-sm-2 control-label" for="inputWarning">Input with warning and glyphicon</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputWarning">
+        <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+      </div>
+    </div>
+    <div class="form-group has-error has-feedback">
+      <label class="col-sm-2 control-label" for="inputError">Input with error and glyphicon</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputError">
+        <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+      </div>
+    </div>
+  </form>
+</div>
+</nav>
+{% endblock orta %}

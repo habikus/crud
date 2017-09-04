@@ -1,0 +1,15 @@
+{% extends 'header.html' %}
+{% block orta %}
+
+ <!-- formu ekle  -->
+ <form class="navbar-form navbar-left" role="search" method="GET" action="{% url 'tekara' %}">
+     <div class="input-group">
+         <input class="form-control" type="text" name="q" placeholder="Sitede Ara" value="{{request.GET.q}}" >
+         <span class="input-group-btn">
+             <input class="btn btn-primary" type="submit" value="Ara">
+         </span>
+     </div>
+ </form>
+<hr>
+
+{% endblock orta %}

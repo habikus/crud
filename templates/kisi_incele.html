@@ -1,0 +1,23 @@
+{% extends 'header.html' %}
+{% block orta %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="thumbnail">
+                    <div class="caption">
+                        <h3>Kişi: <a href="{{ kisi.get_absolute_url }}">{{ kisi.adsoyad }}</a> </h3>
+                        <h4>{{ kisi.user.get_full_name }}</h4>
+                        <p>{{ kisi.aciklama|safe|linebreaks|truncatechars:150 }}</p>
+                        <p>
+                         <a href="{{ kisi.get_absolute_url2 }}" class="btn btn-primary" role="button">İncele</a>
+                         {% if request.user.is_authenticated %}
+                         <a href="{{ kisi.get_update_url }}" class="btn btn-default" role="button">Güncelle</a>
+                         <a href="{{ kisi.get_delete_url }}" class="btn btn-danger" role="button">Sil</a>
+                         {% endif %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock orta %}

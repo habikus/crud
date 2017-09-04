@@ -1,0 +1,31 @@
+{% extends 'header.html' %}
+{% block orta %}
+
+<div align="center"><h1> KİŞİ GÖRÜNTÜLEME</h1></div>
+<table  border="3" width="1000" align="center" cellpadding="4" cellspacing="6"  bgcolor="#FFFF99" align="left"
+        bordercolor=red style="font-family: arial;">
+    <h1>
+        <tr>
+        <td align="left" bgcolor=blue color="green" style="color:yellow">Adı ve Soyadı</td>
+        <td align="left" bgcolor=blue color="green" style="color:yellow">Sınıfı</td>
+        <td align="left" bgcolor=blue color="green" style="color:yellow">Telefonu</td>
+        <td align="left" bgcolor=blue color="green" style="color:yellow">Adresi</td>
+        <td align="left" bgcolor=blue color="green" style="color:yellow">Açıklama</td>
+        </tr>
+    </h1>
+    {% for kisi in tek %}
+      <tr>
+        <th><a href="{% url 'kisi_incele' slug=kisi.slug %}" class="btn btn-success" role="button">{{ kisi.adsoyad }}</a></th>
+        <th align="right">{{ kisi.sinifi }}</th>
+        <th align="left">{{ kisi.nosu }}</th>
+        <th align="left"> {{ kisi.telefonu }}</th>
+        <th align="left"> {{ kisi.aciklama }}</th>
+      </tr>
+    {% endfor %}
+</table>
+ </div>
+
+
+
+{% endblock orta %}
+

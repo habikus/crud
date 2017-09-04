@@ -1,0 +1,23 @@
+{% extends 'header.html' %}
+{% block orta %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="thumbnail">
+                    <div class="caption">
+                        <table border="3" style="width:520px">
+                        <tr>
+                        <td> İşlem Yapanın Adı:</td><td><a href="{{ hereket.get_absolute_url }}"><h3>{{ hareket.adsoyad }}</h3></a></td>
+                        </tr>
+                        <tr><td>Açıklama:</td><td>{{ hareket.aciklama|safe|linebreaks}}</td></tr>
+                        <tr><td>Kitap Adı:</td><td>{{ hareket.kitapadi}}</td></tr>
+                        <tr><td>Alış Tarihi:</td><td>{{ hareket.alistarihi}}</td></tr>
+                        <tr><td>Veriliş Tarihi:</td><td>{{ hareket.verilistarihi}}</td></tr>
+                        <tr><td><a href="{{ hereket.get_update_url }}" class="btn btn-default" role="button">Güncelle</a></td><td><a href="{{ hereket.get_delete_url }}" class="btn btn-danger" role="button">Sil</a></td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock orta %}

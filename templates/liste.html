@@ -1,0 +1,75 @@
+{% extends 'header.html' %}
+{% block orta %}
+<div align="center"><h1>   İŞLEMLER - HAREKET LİSTESİ</h1></div>
+<table  border="3" width="1000" align="center" cellpadding="4" cellspacing="6"  bgcolor="#FFFF99" align="left"
+        bordercolor=red style="font-family: arial;">
+    <h1>
+        <tr>
+        <td align="left" bgcolor=blue color="green" style="color:yellow">Adı ve Soyadı</td>
+        <td align="left" bgcolor=blue color="green" style="color:yellow">Kitap Adı</td>
+        <td align="left" bgcolor=blue color="green" style="color:yellow">Alış Tarihi</td>
+        <td align="left" bgcolor=blue color="green" style="color:yellow">İade Tarihi</td>
+        <td align="left" bgcolor=blue color="green" style="color:yellow">Açıklama</td>
+        </tr>
+    </h1>
+    {% for hareket in hareket_liste %}
+      <tr>
+        <th><a href="{% url 'hareket_incele' slug=hareket.slug %}" class="btn btn-success" role="button">{{ hareket.adsoyad }}</a></th>
+        <th align="left"> {{ hareket.kitapadi }}</a></th>
+        <th align="left"> {{ hareket.alistarihi }}</th>
+        <th align="left"> {{ hareket.verilistarihi }}</th>
+        <th align="left"> {{ hareket.aciklama }}</th>
+      </tr>
+    {% endfor %}
+</table>
+ </div>
+
+<div align="center"><h1> KİŞİ LİSTESİ</h1></div>
+<table  border="3" width="1000" align="center" cellpadding="4" cellspacing="6"  bgcolor="#FFFF99" align="left"
+        bordercolor=red style="font-family: arial;">
+    <h1>
+        <tr>
+        <td align="left" bgcolor=blue color="green" style="color:yellow">Adı ve Soyadı</td>
+        <td align="left" bgcolor=blue color="green" style="color:yellow">Sınıfı</td>
+        <td align="left" bgcolor=blue color="green" style="color:yellow">Nosu</td>
+        <td align="left" bgcolor=blue color="green" style="color:yellow">Telefonu</td>
+        <td align="left" bgcolor=blue color="green" style="color:yellow">e-Mail</td>
+        </tr>
+    </h1>
+    {% for kisi in kisi_liste %}
+      <tr>
+        <th><a href="{% url 'kisi_incele' slug=kisi.slug %}" class="btn btn-success" role="button">{{ kisi.adsoyad }}</a></th>
+        <th align="left"> {{ kisi.sinifi }}</a></th>
+        <th align="left"> {{ kisi.nosu }}</th>
+        <th align="left"> {{ kisi.telefonu }}</th>
+        <th align="left"> {{ kisi.email }}</th>
+      </tr>
+    {% endfor %}
+</table>
+ </div>
+
+<div align="center"><h1>KİTAP LİSTESİ </h1></div>
+<table  border="3" width="1000" align="center" cellpadding="4" cellspacing="6"  bgcolor="#FFFF99" align="left"
+        bordercolor=red style="font-family: arial;">
+    <h1>
+        <tr>
+        <td align="left" bgcolor=blue color="green" style="color:yellow">Kitap Adı</td>
+        <td align="left" bgcolor=blue color="green" style="color:yellow">Yazarı</td>
+        <td align="left" bgcolor=blue color="green" style="color:yellow">Yayınevi</td>
+        <td align="left" bgcolor=blue color="green" style="color:yellow">Türü</td>
+        <td align="left" bgcolor=blue color="green" style="color:yellow">Açıklama</td>
+        </tr>
+    </h1>
+    {% for kitap in kitap_liste %}
+      <tr>
+        <th><a href="{% url 'kitap_incele' slug=kitap.slug %}" class="btn btn-warning" role="button">{{ kitap.kitapadi }}</a></th>
+        <th align="left"> {{ kitap.yazari }}</th>
+        <th align="left"> {{ kitap.yayinevi }}</th>
+        <th align="left"> {{ kitap.turu }}</th>
+        <th align="left"> {{ kitap.aciklama }}</th>
+
+      </tr>
+    {% endfor %}
+</table>
+ </div>
+{% endblock orta %}

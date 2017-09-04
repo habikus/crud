@@ -1,0 +1,11 @@
+DATABASES = {
+    'default': {
+        'ENGINE' : 'firebird',
+        'NAME' : '/var/lib/firebird/2.5/data/django_firebird.fdb', # Path to database or db alias
+        'USER' : 'SYSDBA',           # Your db user
+        'PASSWORD' : '*****',    # db user password
+        'HOST' : '127.0.0.1',        # Your host machine
+        'PORT' : '3050',             # If is empty, use default 3050
+        #'OPTIONS' : {'charset':'ISO8859_1'}
+    }
+}
